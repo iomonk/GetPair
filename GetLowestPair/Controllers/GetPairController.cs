@@ -8,11 +8,11 @@ namespace GetLowestPair.Controllers;
 [Route("api/[controller]")]
 public class GetPairController : ControllerBase
 {
-    [HttpPost(Name = "PostArrayAndDesiredSum")]
-    public DesiredPairResult PostUserArrayAndDesiredSum([FromBody] int[] arrayValues, int desiredSum)
+    [HttpPost(Name = "ArrayDesiredSum")]
+    public DesiredPairResult ArrayDesiredSum([FromBody] int[] arrayValues, int desiredSum)
     {
-        var sorted = SortArray(arrayValues);
-        return FindDesiredSum(sorted, desiredSum);
+        var sortedArray = SortArray(arrayValues);
+        return FindDesiredSum(sortedArray, desiredSum);
     }
 
     private static int[] SortArray(IEnumerable<int> arrayValues)
