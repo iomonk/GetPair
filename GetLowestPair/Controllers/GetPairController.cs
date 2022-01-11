@@ -39,10 +39,8 @@ public class GetPairController : ControllerBase
                 return dpr;
             }
 
-            if (dpr.FirstLowestPair == 0 || dpr.SecondLowestPair == 0)
-            {
-                dpr.Message = $"{Message.NoPairFound} {desiredSum}";
-            }
+            if (dpr.FirstLowestPair == 0 || dpr.SecondLowestPair == 0) dpr.Message = $"{Message.NoPairFound} {desiredSum}";
+            
         }
 
         return dpr;
