@@ -6,7 +6,7 @@ namespace GetLowestPair.Handlers;
 
 public class CalculationHandler : ICalculationHandler
 {
-    public DesiredPairResult FindDesiredSum(int[] arrayValues, int desiredSum)
+    public DesiredPairResult FindDesiredSum(IEnumerable<int> arrayValues, int desiredSum)
     {
         var sorted = arrayValues.Where(av => av != 0).Distinct().OrderBy(av => av).ToArray();
 
