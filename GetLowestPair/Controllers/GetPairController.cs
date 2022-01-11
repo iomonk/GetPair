@@ -18,12 +18,6 @@ public class GetPairController : ControllerBase
     [HttpPost(Name = "ArrayDesiredSum")]
     public DesiredPairResult ArrayDesiredSum([FromBody] int[] arrayValues, int desiredSum)
     {
-        var sortedArray = SortArray(arrayValues);
-        return _calcHandler.FindDesiredSum(sortedArray, desiredSum);
-    }
-
-    private static int[] SortArray(IEnumerable<int> arrayValues)
-    {
-        return arrayValues.Where(av => av != 0).Distinct().OrderBy(av => av).ToArray();
+        return _calcHandler.FindDesiredSum(arrayValues, desiredSum);
     }
 }

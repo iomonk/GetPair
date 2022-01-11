@@ -4,5 +4,5 @@ namespace GetLowestPair.Interfaces;
 
 public interface ICalculationHandler
 {
-    DesiredPairResult FindDesiredSum(IReadOnlyList<int> sorted, int desiredSum);
+    DesiredPairResult FindDesiredSum(int[] arrayValues, int desiredSum);
 }
