@@ -35,7 +35,7 @@ public class GetPairController : ControllerBase
                 if (sorted[i] + sorted[j] != desiredSum) continue;
                 dpr.FirstLowestPair = sorted[i];
                 dpr.SecondLowestPair = sorted[j];
-                dpr.Message = $"{Message.DesiredSum} {desiredSum}. {Message.LowestPairFound} {dpr.FirstLowestPair} + {dpr.SecondLowestPair}.";
+                dpr.Message = $"{Message.DesiredSum} {dpr.DesiredSum}. {Message.LowestPairFound} {dpr.FirstLowestPair} + {dpr.SecondLowestPair}.";
                 return dpr;
             }
         }
